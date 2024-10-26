@@ -1,0 +1,31 @@
+[package]
+name = "zkprivacypass"
+version = "0.2.0-pre.0"
+edition = "2021"
+description = "universal issuance and redemption for privacypass via zkSTARKs"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+futures = { version = "0.3" }
+async-trait = "0.1.56"
+base64 = "0.22.0"
+generic-array = "0.14.5"
+rand = "0.8.5"
+serde = "1"
+sha2 = "0.10.2"
+thiserror = "1"
+tls_codec = { version = "0.4.1" }
+tls_codec_derive = "0.4.1"
+voprf = { version = "0.5", features = ["serde"] }
+p384 = { version = "0.13.0", default-features = false, features = [
+  "hash2curve",
+  "voprf",
+] }
+blind-rsa-signatures = "0.15.0"
+typenum = "1.15.0"
+nom = "7"
+entrypoint = { git = "https://github.com/lita-xyz/valida-rs.git", branch = "main" }
+privacypass = { git = "https://github.com/raphaelrobert/privacypass" , features = ["kat"] }
+tokio = { version = "1.20.0", features = ["rt", "sync"] }
+
