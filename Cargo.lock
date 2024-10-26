@@ -1098,7 +1098,7 @@ dependencies = [
 
 [[package]]
 name = "zkprivacypass"
-version = "0.2.0-pre.0"
+version = "0.0.0-pre.0"
 dependencies = [
  "async-trait",
  "base64",

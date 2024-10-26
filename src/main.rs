@@ -80,7 +80,7 @@ fn main() {
     let server = privacypass::public_tokens::server::IssuerServer::new();
     let _ = executor::block_on(async {
         entrypoint::io::println(&format!("creating keypair"));
-        create_public_keypair(&mut rng, key_store, &server).await
+        create_public_keypair(&mut rng, key_store, &server).await;
     });
     entrypoint::io::println(&format!("IssuerServer: {:?}", server));
 }
